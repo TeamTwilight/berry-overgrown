@@ -32,7 +32,7 @@ public class BerryOvergrown {
 
 		LOGGER.debug("Adding Berry Overgrown packs.");
 
-		// event.addPackFinders(modid("datapacks/ore"), PackType.SERVER_DATA, Component.literal("Twilight Forest: Ore Berries"), PackSource.BUILT_IN, Config.ORE_BERRIES.getAsBoolean(), Pack.Position.TOP);
+		event.addPackFinders(modid("datapacks/ore"), PackType.SERVER_DATA, Component.literal("Twilight Forest: Ore Berries"), PackSource.BUILT_IN, Config.ORE_BERRIES.getAsBoolean(), Pack.Position.TOP);
 		event.addPackFinders(modid("datapacks/nether"), PackType.SERVER_DATA, Component.literal("Twilight Forest: Nether Berries"), PackSource.BUILT_IN, Config.NETHER_BERRIES.getAsBoolean(), Pack.Position.TOP);
 		event.addPackFinders(modid("datapacks/overworld"), PackType.SERVER_DATA, Component.literal("Twilight Forest: Overworld Berries"), PackSource.BUILT_IN, Config.OVERWORLD_BERRIES.getAsBoolean(), Pack.Position.TOP);
 	}
