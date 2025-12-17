@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#nether_tf_bushes:generates_duskberry_bushes",
+  "features": "nether_tf_bushes:duskberry_bush",
+  "step": "vegetal_decoration"
+}

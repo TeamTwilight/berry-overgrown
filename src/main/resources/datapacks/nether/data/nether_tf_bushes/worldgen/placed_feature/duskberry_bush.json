@@ -1,0 +1,16 @@
+{
+  "feature": "nether_tf_bushes:duskberry_bushes",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 50
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

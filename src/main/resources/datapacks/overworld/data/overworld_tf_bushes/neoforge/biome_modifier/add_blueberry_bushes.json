@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overworld_tf_bushes:generates_blueberry_bushes",
+  "features": "overworld_tf_bushes:blueberry_bush",
+  "step": "vegetal_decoration"
+}

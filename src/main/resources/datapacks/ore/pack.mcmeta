@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Brings Twilight Forest's Ore Berry Bushes to the Overworld!",
+    "pack_format": 48,
+    "supported_formats": [
+      0,
+      2147483647
+    ]
+  }
+}

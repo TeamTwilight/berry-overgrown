@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overworld_tf_bushes:generates_blackberry_bushes",
+  "features": "overworld_tf_bushes:blackberry_bush",
+  "step": "vegetal_decoration"
+}

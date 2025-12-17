@@ -1,0 +1,44 @@
+{
+  "values": [
+    "minecraft:snowy_taiga",
+    "minecraft:frozen_ocean",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:cold_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:frozen_river",
+    "minecraft:snowy_plains",
+    "minecraft:ice_spikes",
+    "minecraft:grove",
+    "minecraft:frozen_peaks",
+    "minecraft:snowy_slopes",
+    "minecraft:jagged_peaks",
+    {
+      "id":"biomesoplenty:auroral_garden",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:muskeg",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:snowblossom_grove",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:snowy_coniferous_forest",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:snowy_fir_clearing",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:snowy_maple_woods",
+      "required": false
+    },
+    {
+      "id":"biomesoplenty:tundra",
+      "required": false
+    }
+  ]
+}
