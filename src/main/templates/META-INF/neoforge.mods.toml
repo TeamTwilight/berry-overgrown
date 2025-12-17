@@ -87,5 +87,5 @@ description='''${mod_description}'''
     modId="twilightforest"
     type="required"
     versionRange="${tf_version_range}"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"

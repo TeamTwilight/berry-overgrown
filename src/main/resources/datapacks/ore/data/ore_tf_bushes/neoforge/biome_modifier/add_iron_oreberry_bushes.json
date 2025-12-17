@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ore_tf_bushes:generates_iron_oreberry_bushes",
+  "features": "ore_tf_bushes:iron_oreberry_bush",
+  "step": "vegetal_decoration"
+}
