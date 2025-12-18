@@ -1,5 +1,5 @@
 {
-  "feature": "twilightforest:iron_oreberries",
+  "feature": "ore_tf_bushes:iron_oreberry_bush",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

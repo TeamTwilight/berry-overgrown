@@ -1,5 +1,5 @@
 {
-  "feature": "twilightforest:essence_oreberries",
+  "feature": "ore_tf_bushes:essence_oreberry_bush",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -17,7 +17,7 @@
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 7
+      "chance": 16
     },
     {
       "type": "minecraft:biome"
