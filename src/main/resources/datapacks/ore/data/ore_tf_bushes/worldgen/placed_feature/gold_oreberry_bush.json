@@ -2,10 +2,6 @@
   "feature": "ore_tf_bushes:gold_oreberry_bush",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 8
-    },
-    {
       "type": "minecraft:count_on_every_layer",
       "count": 1
     },
@@ -17,7 +13,7 @@
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 10
+      "chance": 25
     },
     {
       "type": "berry_overgrown:oreberry_place_filter"

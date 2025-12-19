@@ -2,22 +2,18 @@
   "feature": "ore_tf_bushes:essence_oreberry_bush",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 7
-    },
-    {
       "type": "minecraft:count_on_every_layer",
       "count": 1
     },
     {
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "WORLD_SURFACE_WG",
-      "max_inclusive": -64,
+      "max_inclusive": -80,
       "min_inclusive": -256
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 16
+      "chance": 36
     },
     {
       "type": "berry_overgrown:oreberry_place_filter"
