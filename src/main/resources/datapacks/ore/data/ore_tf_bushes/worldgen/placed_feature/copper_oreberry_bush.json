@@ -20,6 +20,9 @@
       "chance": 6
     },
     {
+      "type": "berry_overgrown:oreberry_place_filter"
+    },
+    {
       "type": "minecraft:biome"
     }
   ]

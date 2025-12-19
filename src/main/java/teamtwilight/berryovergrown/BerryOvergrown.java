@@ -1,12 +1,16 @@
 package teamtwilight.berryovergrown;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -22,6 +26,10 @@ public class BerryOvergrown {
     public static final String MODID = "berry_overgrown";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+	private static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIER_TYPES = DeferredRegister.create(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, MODID);
+
+	public static final DeferredHolder<PlacementModifierType<?>, PlacementModifierType<OreberryBushPlacementFilter>> OREBERRY_PLACE_FILTER = PLACEMENT_MODIFIER_TYPES.register("oreberry_place_filter", () -> () -> OreberryBushPlacementFilter.CODEC);
+
 	private final PackSource builtInNotAuto = new PackSource() {
 		@Override
 		public Component decorate(Component title) {
@@ -36,6 +44,8 @@ public class BerryOvergrown {
 
 	public BerryOvergrown(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::registerDataPacks);
+
+		PLACEMENT_MODIFIER_TYPES.register(modEventBus);
 
 		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -55,7 +65,7 @@ public class BerryOvergrown {
 				modid("datapacks/" + packFolder),
 				PackType.SERVER_DATA,
 				Component.literal(name),
-				autoAdd ? PackSource.BUILT_IN : this.builtInNotAuto,
+				this.builtInNotAuto,
 				autoAdd,
 				Pack.Position.TOP
 		);
