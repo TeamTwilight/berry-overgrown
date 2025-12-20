@@ -1,43 +1,43 @@
 {
   "values": [
-    "minecraft:snowy_taiga",
-    "minecraft:frozen_ocean",
-    "minecraft:deep_frozen_ocean",
     "minecraft:cold_ocean",
     "minecraft:deep_cold_ocean",
-    "minecraft:frozen_river",
-    "minecraft:snowy_plains",
-    "minecraft:ice_spikes",
-    "minecraft:grove",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:frozen_ocean",
     "minecraft:frozen_peaks",
-    "minecraft:snowy_slopes",
+    "minecraft:frozen_river",
+    "minecraft:grove",
+    "minecraft:ice_spikes",
     "minecraft:jagged_peaks",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_slopes",
+    "minecraft:snowy_taiga",
     {
-      "id":"biomesoplenty:auroral_garden",
+      "id": "biomesoplenty:auroral_garden",
       "required": false
     },
     {
-      "id":"biomesoplenty:muskeg",
+      "id": "biomesoplenty:muskeg",
       "required": false
     },
     {
-      "id":"biomesoplenty:snowblossom_grove",
+      "id": "biomesoplenty:snowblossom_grove",
       "required": false
     },
     {
-      "id":"biomesoplenty:snowy_coniferous_forest",
+      "id": "biomesoplenty:snowy_coniferous_forest",
       "required": false
     },
     {
-      "id":"biomesoplenty:snowy_fir_clearing",
+      "id": "biomesoplenty:snowy_fir_clearing",
       "required": false
     },
     {
-      "id":"biomesoplenty:snowy_maple_woods",
+      "id": "biomesoplenty:snowy_maple_woods",
       "required": false
     },
     {
-      "id":"biomesoplenty:tundra",
+      "id": "biomesoplenty:tundra",
       "required": false
     }
   ]

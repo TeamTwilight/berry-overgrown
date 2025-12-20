@@ -1,65 +1,65 @@
 {
   "values": [
-    "minecraft:forest",
-    "minecraft:swamp",
-    "minecraft:mangrove_swamp",
-    "minecraft:mushroom_fields",
-    "minecraft:jungle",
-    "minecraft:sparse_jungle",
     "minecraft:birch_forest",
-    "minecraft:old_growth_birch_forest",
     "minecraft:dark_forest",
+    "minecraft:forest",
+    "minecraft:jungle",
+    "minecraft:mangrove_swamp",
     "minecraft:meadow",
+    "minecraft:mushroom_fields",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:sparse_jungle",
+    "minecraft:swamp",
     {
-      "id":"biomesoplenty:bayou",
+      "id": "biomesoplenty:bayou",
       "required": false
     },
     {
-      "id":"biomesoplenty:bog",
+      "id": "biomesoplenty:bog",
       "required": false
     },
     {
-      "id":"biomesoplenty:fungal_jungle",
+      "id": "biomesoplenty:fungal_jungle",
       "required": false
     },
     {
-      "id":"biomesoplenty:highland",
+      "id": "biomesoplenty:highland",
       "required": false
     },
     {
-      "id":"biomesoplenty:jacaranda_glade",
+      "id": "biomesoplenty:jacaranda_glade",
       "required": false
     },
     {
-      "id":"biomesoplenty:jade_cliffs",
+      "id": "biomesoplenty:jade_cliffs",
       "required": false
     },
     {
-      "id":"biomesoplenty:marsh",
+      "id": "biomesoplenty:marsh",
       "required": false
     },
     {
-      "id":"biomesoplenty:old_growth_woodland",
+      "id": "biomesoplenty:old_growth_woodland",
       "required": false
     },
     {
-      "id":"biomesoplenty:pumpkin_patch",
+      "id": "biomesoplenty:pumpkin_patch",
       "required": false
     },
     {
-      "id":"biomesoplenty:rainforest",
+      "id": "biomesoplenty:rainforest",
       "required": false
     },
     {
-      "id":"biomesoplenty:tropics",
+      "id": "biomesoplenty:tropics",
       "required": false
     },
     {
-      "id":"biomesoplenty:wetland",
+      "id": "biomesoplenty:wetland",
       "required": false
     },
     {
-      "id":"biomesoplenty:woodland",
+      "id": "biomesoplenty:woodland",
       "required": false
     }
   ]

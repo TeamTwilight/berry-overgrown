@@ -2,11 +2,11 @@
   "values": [
     "minecraft:nether_wastes",
     {
-      "id":"biomesoplenty:undergrowth",
+      "id": "biomesoplenty:crystalline_chasm",
       "required": false
     },
     {
-      "id":"biomesoplenty:crystalline_chasm",
+      "id": "biomesoplenty:undergrowth",
       "required": false
     }
   ]
