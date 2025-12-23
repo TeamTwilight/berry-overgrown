@@ -35,7 +35,7 @@ public class BerryOvergrown {
 
 	private final PackSource overworld = new ConfigToggledPackSource(() -> Config.OVERWORLD_BERRIES.getAsBoolean());
 	private final PackSource nether = new ConfigToggledPackSource(() -> Config.NETHER_BERRIES.getAsBoolean());
-	private final PackSource ore = new ConfigToggledPackSource(() -> Config.ORE_BERRIES.getAsBoolean());
+	private final PackSource ore = new ConfigToggledPackSource(() -> Config.OREBERRIES.getAsBoolean());
 
 	public BerryOvergrown(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::registerDataPacks);
@@ -48,7 +48,7 @@ public class BerryOvergrown {
 	private void registerDataPacks(AddPackFindersEvent event) {
 		if (event.getPackType() != PackType.SERVER_DATA) return;
 
-		this.addPack(event, "ore", "Twilight Forest: Ore Berries", Config.ORE_BERRIES.getAsBoolean(), this.ore);
+		this.addPack(event, "ore", "Twilight Forest: Oreberries", Config.OREBERRIES.getAsBoolean(), this.ore);
 		this.addPack(event, "nether", "Twilight Forest: Nether Berries", Config.NETHER_BERRIES.getAsBoolean(), this.nether);
 		this.addPack(event, "overworld", "Twilight Forest: Overworld Berries", Config.OVERWORLD_BERRIES.getAsBoolean(), this.overworld);
 	}

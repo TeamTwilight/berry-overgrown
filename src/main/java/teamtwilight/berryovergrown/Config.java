@@ -13,8 +13,8 @@ public class Config {
 			.comment("Automatically add Nether Berries datapack during World Creation.")
 			.define("nether-datapack", true);
 
-	public static final ModConfigSpec.BooleanValue ORE_BERRIES = BUILDER
-			.comment("Automatically add Ore Berries datapack during World Creation.")
+	public static final ModConfigSpec.BooleanValue OREBERRIES = BUILDER
+			.comment("Automatically add Oreberries datapack during World Creation.")
 			.define("ore-datapack", true);
 
     static final ModConfigSpec SPEC = BUILDER.build();
