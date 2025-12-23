@@ -20,6 +20,9 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 
+import java.util.function.Supplier;
+
+@SuppressWarnings("Convert2MethodRef")
 @Mod(BerryOvergrown.MODID)
 public class BerryOvergrown {
 
@@ -30,17 +33,9 @@ public class BerryOvergrown {
 
 	public static final DeferredHolder<PlacementModifierType<?>, PlacementModifierType<OreberryBushPlacementFilter>> OREBERRY_PLACE_FILTER = PLACEMENT_MODIFIER_TYPES.register("oreberry_place_filter", () -> () -> OreberryBushPlacementFilter.CODEC);
 
-	private final PackSource builtInNotAuto = new PackSource() {
-		@Override
-		public Component decorate(Component title) {
-			return Component.translatable("pack.nameAndSource", title, Component.translatable("pack.source.builtin")).withStyle(ChatFormatting.GRAY);
-		}
-
-		@Override
-		public boolean shouldAddAutomatically() {
-			return false;
-		}
-	};
+	private final PackSource overworld = new ConfigToggledPackSource(() -> Config.OVERWORLD_BERRIES.getAsBoolean());
+	private final PackSource nether = new ConfigToggledPackSource(() -> Config.NETHER_BERRIES.getAsBoolean());
+	private final PackSource ore = new ConfigToggledPackSource(() -> Config.ORE_BERRIES.getAsBoolean());
 
 	public BerryOvergrown(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::registerDataPacks);
@@ -53,25 +48,37 @@ public class BerryOvergrown {
 	private void registerDataPacks(AddPackFindersEvent event) {
 		if (event.getPackType() != PackType.SERVER_DATA) return;
 
-		this.addPack(event, "ore", "Twilight Forest: Ore Berries", Config.ORE_BERRIES.getAsBoolean());
-		this.addPack(event, "nether", "Twilight Forest: Nether Berries", Config.NETHER_BERRIES.getAsBoolean());
-		this.addPack(event, "overworld", "Twilight Forest: Overworld Berries", Config.OVERWORLD_BERRIES.getAsBoolean());
+		this.addPack(event, "ore", "Twilight Forest: Ore Berries", Config.ORE_BERRIES.getAsBoolean(), this.ore);
+		this.addPack(event, "nether", "Twilight Forest: Nether Berries", Config.NETHER_BERRIES.getAsBoolean(), this.nether);
+		this.addPack(event, "overworld", "Twilight Forest: Overworld Berries", Config.OVERWORLD_BERRIES.getAsBoolean(), this.overworld);
 	}
 
-	private void addPack(AddPackFindersEvent event, String packFolder, String name, boolean autoAdd) {
+	private void addPack(AddPackFindersEvent event, String packFolder, String name, boolean autoAdd, PackSource packSource) {
 		LOGGER.debug(autoAdd ? "Adding {} pack to activated column" : "Adding {} pack to deactivated column", name);
 
 		event.addPackFinders(
 				modid("datapacks/" + packFolder),
 				PackType.SERVER_DATA,
 				Component.literal(name),
-				this.builtInNotAuto,
-				autoAdd,
+				packSource,
+				false,
 				Pack.Position.TOP
 		);
 	}
 
 	public static ResourceLocation modid(String path) {
 		return ResourceLocation.fromNamespaceAndPath(MODID, path);
+	}
+
+	private record ConfigToggledPackSource(Supplier<Boolean> checkAddAutomatically) implements PackSource {
+		@Override
+		public Component decorate(Component title) {
+			return Component.translatable("pack.nameAndSource", title, Component.translatable("pack.source.builtin")).withStyle(ChatFormatting.GRAY);
+		}
+
+		@Override
+		public boolean shouldAddAutomatically() {
+			return this.checkAddAutomatically.get();
+		}
 	}
 }
