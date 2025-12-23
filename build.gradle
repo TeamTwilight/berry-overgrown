@@ -18,9 +18,14 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
-
-    mavenLocal() // FIXME remove once update is released
+    maven {
+        name "Tama's Maven" // Twilight Forest
+        url 'https://maven.tamaized.com/releases/'
+        content {
+            includeGroup("tamaized")
+            includeGroup("team-twilight")
+        }
+    }
 }
 
 base {
@@ -136,7 +141,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation "com.github.teamtwilight.twilightforest:twilightforest:4.7:universal" // made available through publishToMavenLocal in Twilight Forest repo Gradle. FIXME switch to release build once available
+    implementation "team-twilight:twilightforest:${twilightforest_version}:universal"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
