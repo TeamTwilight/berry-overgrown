@@ -18,6 +18,16 @@ version = mod_version
 group = mod_group_id
 
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
     maven {
         name "Tama's Maven" // Twilight Forest
         url 'https://maven.tamaized.com/releases/'
@@ -142,6 +152,25 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     implementation "team-twilight:twilightforest:${twilightforest_version}:universal"
+
+    if (enable_biomes_bop) {
+        localRuntime "curse.maven:glitchcore-955399:8109792"
+        localRuntime "curse.maven:terrablender-neoforge-940057:6054947"
+        localRuntime "curse.maven:biomes-o-plenty-220318:8288121"
+    }
+
+    if (enable_biomes_bwg) {
+        localRuntime "curse.maven:corgilib-693313:7773534"
+        localRuntime "curse.maven:geckolib-388172:8893490"
+        localRuntime "curse.maven:oh-the-trees-youll-grow-962544:8096180"
+        localRuntime "curse.maven:terrablender-neoforge-940057:6054947"
+        localRuntime "curse.maven:oh-the-biomes-weve-gone-1070751:8245253"
+    }
+
+    if (enable_biomes_ru) {
+        localRuntime "curse.maven:lithostitched-936015:8944659"
+        localRuntime "curse.maven:regions-unexplored-659110:8419667"
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
