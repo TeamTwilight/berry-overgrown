@@ -24,3 +24,6 @@ runs
 run-data
 
 repo
+
+.DS_Store
+src/generated/resources/.cache
